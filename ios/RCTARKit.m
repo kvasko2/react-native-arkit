@@ -483,6 +483,13 @@ static NSDictionary * getPlaneHitResult(NSMutableArray *resultsMapped, const CGP
         NSDictionary * planeHitResult = [self getPlaneHitResult:tapPoint types:ARHitTestResultTypeExistingPlane];
         self.onTapOnPlaneNoExtent(planeHitResult);
     }
+    
+    if (self.onTapFromCenter){
+        // Take the screen space tap coordinates    and pass them to the hitTest method on the ARSCNView instance
+        tapPoint = self.arView.center;
+        NSDictionary * planeHitResult = [self getPlaneHitResult:tapPoint types:ARHitTestResultTypeExistingPlane];
+        self.onTapFromCenter(planeHitResult);
+    }
 }
 
 

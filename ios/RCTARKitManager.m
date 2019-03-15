@@ -119,12 +119,7 @@ RCT_EXPORT_MODULE()
                      @"Multiply": [@(SCNBlendModeMultiply) stringValue],
                      @"Screen": [@(SCNBlendModeScreen) stringValue],
                      @"Replace": [@(SCNBlendModeReplace) stringValue],
-                     },
-             @"TransparencyMode": @{
-                     @"Default": [@(SCNTransparencyModeAOne) stringValue],
-                     @"RGBZero": [@(SCNTransparencyModeRGBZero) stringValue],
-                     @"SingleLayer": [@(SCNTransparencyModeSingleLayer) stringValue],
-                     @"DualLayer": [@(SCNTransparencyModeDualLayer) stringValue],
+                     
                      },
              @"ChamferMode": @{
                      @"Both": [@(SCNChamferModeBoth) stringValue],
@@ -176,6 +171,7 @@ RCT_EXPORT_VIEW_PROPERTY(onTrackingState, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onFeaturesDetected, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onLightEstimation, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onTapOnPlaneUsingExtent, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(onTapFromCenter, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onTapOnPlaneNoExtent, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onEvent, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onARKitError, RCTBubblingEventBlock)
